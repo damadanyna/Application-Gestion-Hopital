@@ -1,12 +1,15 @@
 <template>
-  <div>accueil</div>
+  <Accueil> </Accueil>
 </template>
 
 <script>
+import Accueil from './accueil.vue';
+  
 export default {
-  data() {
-    return {};
-  },
-  name: "IndexPage",
-};
+    components: { Accueil }
+}
 </script>
+
+<style>
+
+</style>

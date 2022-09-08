@@ -5,3 +5,34 @@
 *{
     transition: .3s;
 }
+
+.black-t{
+    color:#25282B ;
+}
+.black-bg{
+    background:#25282B ;
+}
+.blue-t{
+    color:#336CFB ;
+    fill: #336CFB;
+}
+.blue-bg{
+    background:#336CFB ;
+}
+.green-t{
+    color:#03B575 ;
+}
+.green-bg{
+    background:#03B575 ;
+}
+.red-t{
+    color:#E74F48 ;
+}
+.red-bg{
+    background:#E74F48 ;
+}
+
+
+.my-shadow{
+    box-shadow: 0px 0px 15px rgba(119, 119, 119, 0.308);
+    }
