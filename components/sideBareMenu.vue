@@ -27,12 +27,12 @@
         <div v-if="wrapMenu" ><span class=" delay-100  text-stone-400 text-center px-6" >MEDICINE</span></div>
         <!-- liste -->
         <div :class="wrapMenu ? '  px-6' : ' px-2'" class="flex flex-col ">
-          <router-link v-for="liste in listItem" :class="wrapMenu ? ' m-1 py-1' : 'my-3 py-1'" :key="liste" :to="liste.url" >
+          <nuxt-link v-for="liste in listItem" :class="wrapMenu ? ' m-1 py-1' : 'my-3 py-1'" :key="liste" :to="liste.url" >
             <div class="flex flex-row">
-              <div v-html="liste.ico"></div>
+              <div :title="liste.text"  v-html="liste.ico"></div>
               <span  v-if="wrapMenu"  v-text="liste.text"  class=" black-t ml-3" ></span>
             </div>
-          </router-link>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ export default {
       listItem: [
         {
           text: `Tableau de Bord`,
-          url: `/accueil`,
+          url: `/`,
           ico: `
         <svg class=" w-6 transform hover:scale-150 cursor-pointer" viewBox="0 0 24 24">
           
@@ -107,5 +107,20 @@ export default {
   name: "IndexPage",
 };
 </script>
-<style>
+<style > 
+a{
+  transition: .3s;
+}
+     a.nuxt-link-active svg{
+      fill:#4F46E5;
+      
+     }  
+     a.nuxt-link-exact-active span{
+      color:#4F46E5;
+      font-weight: 800; 
+      
+     } 
+     a.nuxt-link-exact-active path{
+      color:#4F46E5;  
+     }   
 </style>
